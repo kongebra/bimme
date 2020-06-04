@@ -3,6 +3,10 @@
 # Firebase
 firebase-debug.log*
 .firebase/
+ui-debug.log
+
+# Angular Custom
+environment.secret.ts
 
 # compiled output
 /dist
