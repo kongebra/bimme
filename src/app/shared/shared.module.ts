@@ -1,21 +1,29 @@
 import { NgModule } from '@angular/core';
+
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
+const vendor = [CommonModule, RouterModule];
+
+const material = [];
+
+const local = [];
 
 @NgModule({
-  declarations: [],
+  declarations: [...local],
   imports: [
     // vendor
-    CommonModule,
-
+    ...vendor,
     // material
+    ...material,
   ],
   exports: [
     // vendor
-    CommonModule,
-
+    ...vendor,
     // material
-
+    ...material,
     // local
+    ...local,
   ],
 })
 export class SharedModule {}
