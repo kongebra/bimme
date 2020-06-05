@@ -44,9 +44,9 @@ service cloud.firestore {
     }
 
     match /posts/{document} {
-      allow read: if isAdmin() == true;
-      allow update: if isEditor() == true;
-      allow create, delete: if isAdmin() == true;
+      allow read: if isAdmin();
+      allow update: if isEditor();
+      allow create, delete: if isAdmin();
     }
   }
 }
