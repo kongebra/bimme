@@ -3,7 +3,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-const vendor = [CommonModule, RouterModule];
+const vendor = [
+  // ngIf, ngFor
+  CommonModule,
+  // routerLink, <router-outlet>
+  RouterModule,
+];
 
 const material = [];
 
