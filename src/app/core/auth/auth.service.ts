@@ -46,8 +46,9 @@ export class AuthService {
     return this.oAuthLogin(provider);
   }
 
-  signOut(): Promise<void> {
-    return this.afAuth.signOut();
+  async signOut(navigate: any[] = ['/']) {
+    await this.afAuth.signOut();
+    this.router.navigate(navigate);
   }
 
   private oAuthLogin(provider: firebase.auth.AuthProvider): Promise<void> {
@@ -67,6 +68,8 @@ export class AuthService {
       roles: {
         subscriber: true,
       },
+      photoURL: user.photoURL,
+      displayName: user.displayName,
     };
 
     return userRef.set(data, { merge: true });
