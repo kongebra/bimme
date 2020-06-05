@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "bimme"
+  "defaultProject": "bimme",
+  "cli": {
+    "analytics": "afabd49a-ed63-41bd-b45b-78f664737043"
+  }
 }
